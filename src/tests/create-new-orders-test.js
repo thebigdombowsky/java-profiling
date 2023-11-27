@@ -1,28 +1,30 @@
 import { sleep, check } from "k6";
 import http from "k6/http";
-import { uuidv4 } from "../utils.js";
+import { uuidv4, weighted_random } from "../utils.js";
 import { Trend } from "k6/metrics";
-
+import {
+  automationProductIds,
+  manualProductIds,
+  productInfoMap,
+  weights,
+} from "../../lib/productInfoMap";
 export const receiveHISOrdersTrend = new Trend("receiveHISOrders_duration");
 
+let selected_item, product, sender, receiver, upc, orderInfo;
 export default function createNewOrders(orderType) {
-  const orderTypeMap = {
-    AUTO: {
-      product: "1877075",
-      upc: "0130382903064145",
-    },
-    MANUAL: {
-      product: "1000945",
-      upc: "0100382903064144",
-    },
-  };
+  if (orderType === "AUTO") {
+    selected_item = weighted_random(automationProductIds, weights);
+    console.log(selected_item);
+  } else if (orderType === "MANUAL") {
+    selected_item = weighted_random(manualProductIds, weights);
+    console.log(selected_item);
+  }
 
-  const orderInfo = orderTypeMap[orderType];
-  let product;
-
-  if (orderInfo) {
-    product = orderInfo.product;
-    //upc = orderInfo.upc;
+  if (productInfoMap[selected_item]) {
+    product = productInfoMap.product;
+    sender = orderInfo.sender;
+    receiver = orderInfo.receiver;
+    upc = orderInfo.upc;
   } else {
     console.log(`Order type ${orderType} not found.`);
   }
@@ -81,14 +83,26 @@ export default function createNewOrders(orderType) {
     </soapenv:Envelope>
     `;
   // When making a SOAP POST request we must not forget to set the content type to text/xml
-  let startTime = Date.now();
+  // 1. Save the current time
+  const startTime = Date.now();
+  // 2. Send the HTTP request
   const res = http.post(url, pharmacyOrderMsg, {
     headers: { "Content-Type": "text/xml" },
   });
-  let endTime = Date.now();
+  // 3. Save the time after the request completes
+  const endTime = Date.now();
   console.log(
-    `Call to createNewOrders took ${endTime - startTime} milliseconds`,
+    `Call to pharmacyOrders took ${endTime - startTime} milliseconds`,
   );
+
+  const timings = res.timings;
+  console.log(`Blocked time: ${timings.blocked} ms`); // Time spent in a queue waiting for a network connection
+  console.log(`Connecting time: ${timings.connecting} ms`); // Time spent setting up TCP connection
+  console.log(`TLS handshaking time: ${timings.tls_handshaking} ms`); // Time spent completing a TLS handshake
+  console.log(`Sending time: ${timings.sending} ms`); // Time spent sending the request
+  console.log(`Waiting time: ${timings.waiting} ms`); // Time spent waiting for a response
+  console.log(`Receiving time: ${timings.receiving} ms`); // Time spent receiving the response
+  console.log(`Duration: ${timings.duration} ms`); // Total duration of the request
 
   {
     check(res, {

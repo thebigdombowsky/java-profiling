@@ -15,19 +15,6 @@ export default function pickNewOrders(orderId, orderType) {
   const pickReservationKey = 8654091021;
   //console.log(orderId)
 
-  const orderTypeMap = {
-    AUTO: {
-      product: "1877075",
-      upc: "0130382903064145",
-      sourceLocationId: "BP04",
-    },
-    MANUAL: {
-      product: "1000945",
-      upc: "0100382903064144",
-      sourceLocationId: "151-2301",
-    },
-  };
-
   const orderInfo = orderTypeMap[orderType];
   let product, upc, sourceLocationId;
 
@@ -35,8 +22,6 @@ export default function pickNewOrders(orderId, orderType) {
     product = orderInfo.product;
     upc = orderInfo.upc;
     sourceLocationId = orderInfo.sourceLocationId;
-  } else {
-    console.log(`Order type ${orderType} not found.`);
   }
 
   const soapMessage = `<?xml version="1.0"?>
@@ -99,6 +84,8 @@ export default function pickNewOrders(orderId, orderType) {
     headers: { "Content-Type": "text/xml" },
   });
   let endTime = Date.now();
+  console.log(`Call to pickNewOrders took ${endTime - startTime} milliseconds`);
+
   const timings = res.timings;
   console.log(`Blocked time: ${timings.blocked} ms`);
   console.log(`Connecting time: ${timings.connecting} ms`);

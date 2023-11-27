@@ -7,18 +7,19 @@ export const sendDispenseRequestTrend = new Trend(
   "sendDispenseRequest_duration",
 );
 
-export default function sendDispenseRequest(orderType) {
+export default function sendDispenseRequest(orderId, orderType) {
   const url =
     "http://172.24.220.177:16384/AutomationMockWebServiceImpl/MedPortalIntegrationWebService?WSDL";
   const isoString = new Date().toISOString();
   const msgTime = isoString.slice(0, -1);
   const quantity = "1";
   const msgUUID = uuidv4();
+  const orderID = orderId;
 
   const orderTypeMap = {
     AUTO: {
       product: "1877075",
-      upc: "0130382903064145",
+      upc: "0110304093414018",
       automationMachineId: "BP04",
       sender: "BoxPicker",
       receiver: "MedPortal",
@@ -26,7 +27,7 @@ export default function sendDispenseRequest(orderType) {
     MANUAL: {
       product: "1000945",
       upc: "0100382903064144",
-      automationMachineId: "BP04",
+      automationMachineId: "",
       sender: "Shelves",
       receiver: "MedPortal",
     },
@@ -44,46 +45,46 @@ export default function sendDispenseRequest(orderType) {
   }
 
   const soapMessage = `<?xml version="1.0"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"> xmlns:pps="http://swisslog.com/ppsys" xmlns:typ="http://swisslog.com/ppsys/types"
     <soap:Body>
-        <ns1:dispenseRequest xmlns:ns1="http://swisslog.com/ppsys">
-            <ns1:request xmlns:ns2="http://swisslog.com/ppsys/types">
-                <ns2:MessageHeader>
-                    <ns2:MsgId>${msgUUID}</ns2:MsgId>
-                    <ns2:MsgTime>${msgTime}</ns2:MsgTime>
-                    <ns2:MsgType>DispenseRequest</ns2:MsgType>
-                    <ns2:Receiver>${orderType.receiver}</ns2:Receiver>
-                    <ns2:Sender>${orderType.sender}</ns2:Sender>
-                    <ns2:TransCode>NEW</ns2:TransCode>
-                    <ns2:Version>1.0</ns2:Version>
-                </ns2:MessageHeader>
-                <ns2:PatientInfo>
-                    </ns2:ExtraInfos>
-                    <ns2:pointOfCare>Cardiac</ns2:pointOfCare>
-                </ns2:PatientInfo>
-                <ns2:DispenseInfos>
-                    <ns2:DispenseInfo>
-                        <ns2:AdministrationDate>${msgTime}</ns2:AdministrationDate>
-                        <ns2:AdministrationTime>${msgTime}</ns2:AdministrationTime>
-                        <ns2:AutomationMachineId>$automationMachineId}</ns2:AutomationMachineId>
-                        <ns2:GenericProductId>${product}</ns2:GenericProductId>
-                        <ns2:OrderLineNumber>1</ns2:OrderLineNumber>
-                        <ns2:Quantity>1</ns2:Quantity>
-                        <ns2:QuantityOrdered>1</ns2:QuantityOrdered>
-                        <ns2:ReservationKey>23</ns2:ReservationKey>
-                    </ns2:DispenseInfo>
-                </ns2:DispenseInfos>
-                <ns2:ExtraInfos>
-                    <ns2:ExtraInfo>
-                        <ns2:FieldCode></ns2:FieldCode>
-                        <ns2:Value></ns2:Value>
-                    </ns2:ExtraInfo>
-                </ns2:ExtraInfos>
-                <ns2:OrderId></ns2:OrderId>
-                <ns2:OrderType></ns2:OrderType>
-                <ns2:Priority></ns2:Priority>
-            </ns1:request>
-        </ns1:dispenseRequest>
+        <pps:dispenseRequest xmlns:pps="http://swisslog.com/ppsys">
+            <pps:request xmlns:typ="http://swisslog.com/ppsys/types">
+                <typ:MessageHeader>
+                    <typ:MsgId>${msgUUID}</typ:MsgId>
+                    <typ:MsgTime>${msgTime}</typ:MsgTime>
+                    <typ:MsgType>DispenseRequest</typ:MsgType>
+                    <typ:Receiver>${orderType.receiver}</typ:Receiver>
+                    <typ:Sender>${orderType.sender}</typ:Sender>
+                    <typ:TransCode>NEW</typ:TransCode>
+                    <typ:Version>1.0</typ:Version>
+                </typ:MessageHeader>
+                <typ:PatientInfo>
+                    </typ:ExtraInfos>
+                    <typ:pointOfCare>Cardiac</typ:pointOfCare>
+                </typ:PatientInfo>
+                <typ:DispenseInfos>
+                    <typ:DispenseInfo>
+                        <typ:AdministrationDate>${msgTime}</typ:AdministrationDate>
+                        <typ:AdministrationTime>${msgTime}</typ:AdministrationTime>
+                        <typ:AutomationMachineId>${automationMachineId}</typ:AutomationMachineId>
+                        <typ:GenericProductId>${product}</typ:GenericProductId>
+                        <typ:OrderLineNumber>1</typ:OrderLineNumber>
+                        <typ:Quantity>${quantity}</typ:Quantity>
+                        <typ:QuantityOrdered>${quantity}</typ:QuantityOrdered>
+                        <typ:ReservationKey>23</typ:ReservationKey>
+                    </typ:DispenseInfo>
+                </typ:DispenseInfos>
+                <typ:ExtraInfos>
+                    <typ:ExtraInfo>
+                        <typ:FieldCode></typ:FieldCode>
+                        <typ:Value></typ:Value>
+                    </typ:ExtraInfo>
+                </typ:ExtraInfos>
+                <typ:OrderId>${orderID}</typ:OrderId>
+                <typ:OrderType>NEW</typ:OrderType>
+                <typ:Priority>99</typ:Priority>
+            </pps:request>
+        </pps:dispenseRequest>
     </soap:Body>
 </soap:Envelope>`;
 
@@ -93,8 +94,16 @@ export default function sendDispenseRequest(orderType) {
     headers: { "Content-Type": "text/xml" },
   });
   let endTime = Date.now();
+  const timings = res.timings;
+  console.log(`Blocked time: ${timings.blocked} ms`);
+  console.log(`Connecting time: ${timings.connecting} ms`);
+  console.log(`TLS handshaking time: ${timings.tls_handshaking} ms`);
+  console.log(`Sending time: ${timings.sending} ms`);
+  console.log(`Waiting time: ${timings.waiting} ms`);
+  console.log(`Receiving time: ${timings.receiving} ms`);
+  console.log(`Duration: ${timings.duration} ms`);
   console.log(
-    `Call to createDispenseRequests took ${endTime - startTime} milliseconds`,
+    `Call to dispenseRequests took ${endTime - startTime} milliseconds`,
   );
 
   {

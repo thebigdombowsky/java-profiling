@@ -9,17 +9,17 @@ import { randomBytes } from "k6/crypto";
 export function uuidv4(secure = false) {
   return secure ? secureUUIDv4() : insecureUUIDv4();
 }
-
-export function randomIntBetween(min, max) { // min and max included
+export function randomIntBetween(min, max) {
+  // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-export function randomItem(arrayOfItems){
+export function randomItem(arrayOfItems) {
   return arrayOfItems[Math.floor(Math.random() * arrayOfItems.length)];
 }
 
-export function randomString(length, charset='abcdefghijklmnopqrstuvwxyz') {
-  let res = '';
+export function randomString(length, charset = "abcdefghijklmnopqrstuvwxyz") {
+  let res = "";
   while (length--) res += charset[(Math.random() * charset.length) | 0];
   return res;
 }
@@ -27,29 +27,30 @@ export function randomString(length, charset='abcdefghijklmnopqrstuvwxyz') {
 export function findBetween(content, left, right, repeat = false) {
   const extracted = [];
   let doSearch = true;
-  let start, end = 0;
-  
+  let start,
+    end = 0;
+
   while (doSearch) {
     start = content.indexOf(left);
-    if (start == -1) {
+    if (start === -1) {
       break; // no more matches
     }
 
     start += left.length;
     end = content.indexOf(right, start);
-    if (end == -1) {
+    if (end === -1) {
       break; // no more matches
     }
     let extractedContent = content.substring(start, end);
 
     // stop here if only extracting one match (default behavior)
     if (!repeat) {
-      return extractedContent; 
+      return extractedContent;
     }
 
     // otherwise, add it to the array
     extracted.push(extractedContent);
-    
+
     // update the "cursor" position to the end of the previous match
     content = content.substring(end + right.length);
   }
@@ -57,31 +58,44 @@ export function findBetween(content, left, right, repeat = false) {
   return extracted.length ? extracted : null; // return all matches as an array or null
 }
 
-export function normalDistributionStages(maxVus, durationSeconds, numberOfStages=10) {
+export function normalDistributionStages(
+  maxVus,
+  durationSeconds,
+  numberOfStages = 10,
+) {
   function normalDensity(mean, scale, x) {
-    return Math.exp(-1 / 2 * Math.pow((x - mean) / scale, 2)) / (scale * Math.sqrt(2 * Math.PI));
+    return (
+      Math.exp((-1 / 2) * Math.pow((x - mean) / scale, 2)) /
+      (scale * Math.sqrt(2 * Math.PI))
+    );
   }
 
   const mean = 0;
   const scale = 1;
   let curve = new Array(numberOfStages + 2).fill(0);
-  let durations = new Array(numberOfStages + 2).fill(Math.ceil(durationSeconds / 6));
+  let durations = new Array(numberOfStages + 2).fill(
+    Math.ceil(durationSeconds / 6),
+  );
   let k6stages = [];
 
   for (let i = 0; i <= numberOfStages; i++) {
-    curve[i] = normalDensity(mean, scale, -2 * scale + 4 * scale * i / numberOfStages);
+    curve[i] = normalDensity(
+      mean,
+      scale,
+      -2 * scale + (4 * scale * i) / numberOfStages,
+    );
   }
 
   let peakDistribution = Math.max(...curve);
 
-  let vus = curve.map(x => Math.round(x * maxVus / peakDistribution));
+  let vus = curve.map((x) => Math.round((x * maxVus) / peakDistribution));
 
   for (let j = 1; j <= numberOfStages; j++) {
-    durations[j] = Math.ceil(4 * durationSeconds / (6 * numberOfStages));
+    durations[j] = Math.ceil((4 * durationSeconds) / (6 * numberOfStages));
   }
 
   for (let k = 0; k <= numberOfStages + 1; k++) {
-    k6stages.push({duration: `${durations[k]}s`, target: vus[k]});
+    k6stages.push({ duration: `${durations[k]}s`, target: vus[k] });
   }
 
   return k6stages;
@@ -156,4 +170,35 @@ function secureUUIDv4() {
     byteToHex[rnds[14]] +
     byteToHex[rnds[15]]
   ).toLowerCase();
+}
+
+export function executeWithCustomProbability(percent) {
+  const autoOrderPercent = percent; // percent of orders are AUTO
+  const random = Math.random(); // Generates a random number between 0 and 1
+
+  let typeOfOrder;
+  if (random <= autoOrderPercent / 100) {
+    console.log("Automation order type created...");
+    typeOfOrder = "AUTO";
+  } else {
+    console.log("Manual order type created...");
+    typeOfOrder = "MANUAL";
+  }
+
+  // Perform other initialization tasks here (if needed)
+  return typeOfOrder; // Return the determined typeOfOrder
+}
+
+export function weighted_random(items, weights) {
+  let i;
+  for (i = 1; i < weights.length; i++) {
+    weights[i] += weights[i - 1];
+  }
+  let random = Math.random() * weights[weights.length - 1];
+  for (i = 0; i < weights.length; i++) {
+    if (weights[i] > random) {
+      break;
+    }
+  }
+  return items[i];
 }
