@@ -16,7 +16,6 @@ export default function pickNewOrders(orderId, selected_item) {
   const quantity = "1";
   const msgUUID = uuidv4();
   const pickReservationKey = 8654091021;
-  console.log(orderId);
 
   if (productInfoMap[selected_item]) {
     product = productInfoMap[selected_item].product;
@@ -30,13 +29,13 @@ export default function pickNewOrders(orderId, selected_item) {
     console.log(`Product ${product} not found.`);
   }
 
-  console.log(`orderId: ${orderId}`);
+  /*  console.log(`orderId: ${orderId}`);
   console.log(`product: ${product}`);
   console.log(`sender: ${sender}`);
   console.log(`receiver: ${receiver}`);
   console.log(`upc: ${upc}`);
   console.log(`sourceLocationId: ${sourceLocationId}`);
-  console.log(`expiryDate: ${expiryDate}`);
+  console.log(`expiryDate: ${expiryDate}`);*/
 
   const soapMessage = `<?xml version="1.0"?>
   <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:host="http://host.wm6.swisslog.com/">

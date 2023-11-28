@@ -95,7 +95,6 @@ export default function createNewOrders(orderType) {
     `Call to pharmacyOrders took ${endTime - startTime} milliseconds`,
   );
 
-  console.log(msgUUID);
   const timings = res.timings;
   console.log(`Blocked time: ${timings.blocked} ms`); // Time spent in a queue waiting for a network connection
   console.log(`Connecting time: ${timings.connecting} ms`); // Time spent setting up TCP connection

@@ -2,7 +2,7 @@ export const productInfoMap = {
   1844493: {
     product: "1844493",
     upc: "0100301211488107",
-    automationMachineId: "BP04",
+    automationMachineId: "BP03",
     sender: "HIS",
     receiver: "MedPortal",
     expiryDate: "2025-05-31T00:00:00.000",
@@ -11,7 +11,7 @@ export const productInfoMap = {
   1793887: {
     product: "1793887",
     upc: "0904673061",
-    automationMachineId: "BP04",
+    automationMachineId: "BP03",
     sender: "HIS",
     receiver: "MedPortal",
     expiryDate: "2025-05-31T00:00:00.000",
@@ -20,7 +20,7 @@ export const productInfoMap = {
   1793823: {
     product: "1793823",
     upc: "0904677361",
-    automationMachineId: "BP04",
+    automationMachineId: "BP03",
     sender: "HIS",
     receiver: "MedPortal",
     expiryDate: "2026-02-28T00:00:00.000",
@@ -29,7 +29,7 @@ export const productInfoMap = {
   1799915: {
     product: "1799915",
     upc: "309047279661",
-    automationMachineId: "BP04",
+    automationMachineId: "BP03",
     sender: "HIS",
     receiver: "MedPortal",
     expiryDate: "2025-05-31T00:00:00.000",
@@ -38,7 +38,7 @@ export const productInfoMap = {
   1860330: {
     product: "1860330",
     upc: "0904700861",
-    automationMachineId: "BP04",
+    automationMachineId: "BP03",
     sender: "HIS",
     receiver: "MedPortal",
     expiryDate: "2024-09-30T00:00:00.000",

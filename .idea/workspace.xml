@@ -4,31 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad40f36e-b909-4f61-8618-45b76e2f5903" name="Changes" comment="SD-Add expiryDate to dispense update">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/push.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/push.yml" afterDir="false" />
+    <list default="true" id="ad40f36e-b909-4f61-8618-45b76e2f5903" name="Changes" comment="SD-Remove extraneous files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarnrc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.yarnrc.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jsonpath.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jsonpath.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/productInfoMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/productInfoMap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/get-200-status-test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/get-200-status-test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/post-400-status-test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/post-400-status-test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/post-file-test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/post-file-test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/create-dispense-requests-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/create-dispense-requests-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/productInfoMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/productInfoMap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/create-new-orders-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/create-new-orders-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/get-200-status-test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/get-200-status-test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/pick-new-orders-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/pick-new-orders-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/post-400-status-test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/post-400-status-test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/post-file-test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/post-file-test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/transactions-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/transactions-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +124,8 @@
       <workItem from="1700244943502" duration="5367000" />
       <workItem from="1700608380056" duration="2489000" />
       <workItem from="1701096021702" duration="1175000" />
-      <workItem from="1701097390026" duration="15649000" />
+      <workItem from="1701097390026" duration="15732000" />
+      <workItem from="1701194044961" duration="7141000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -186,7 +167,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701096404652</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="SD-Add expiryDate to dispense update">
+      <option name="closed" value="true" />
+      <created>1701193896251</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701193896251</updated>
+    </task>
+    <task id="LOCAL-00007" summary="SD-Remove extraneous files">
+      <option name="closed" value="true" />
+      <created>1701194121593</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701194121594</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +195,8 @@
     <MESSAGE value="Add multi-order type" />
     <MESSAGE value="SD-Add random weighted product selection" />
     <MESSAGE value="SD-Add expiryDate to dispense update" />
-    <option name="LAST_COMMIT_MESSAGE" value="SD-Add expiryDate to dispense update" />
+    <MESSAGE value="SD-Remove extraneous files" />
+    <option name="LAST_COMMIT_MESSAGE" value="SD-Remove extraneous files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
