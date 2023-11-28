@@ -7,10 +7,10 @@ import {
   manualProductIds,
   productInfoMap,
   weights,
-} from "../../lib/productInfoMap";
+} from "../productInfoMap.js";
 export const receiveHISOrdersTrend = new Trend("receiveHISOrders_duration");
 
-let selected_item, product, sender, receiver, upc, orderInfo;
+let selected_item, product, sender, receiver, upc;
 export default function createNewOrders(orderType) {
   if (orderType === "AUTO") {
     selected_item = weighted_random(automationProductIds, weights);
@@ -21,10 +21,10 @@ export default function createNewOrders(orderType) {
   }
 
   if (productInfoMap[selected_item]) {
-    product = productInfoMap.product;
-    sender = orderInfo.sender;
-    receiver = orderInfo.receiver;
-    upc = orderInfo.upc;
+    product = productInfoMap[selected_item].product;
+    sender = productInfoMap[selected_item].sender;
+    receiver = productInfoMap[selected_item].receiver;
+    upc = productInfoMap[selected_item].upc;
   } else {
     console.log(`Order type ${orderType} not found.`);
   }
@@ -82,7 +82,7 @@ export default function createNewOrders(orderType) {
        </soapenv:Body>
     </soapenv:Envelope>
     `;
-  // When making a SOAP POST request we must not forget to set the content type to text/xml
+
   // 1. Save the current time
   const startTime = Date.now();
   // 2. Send the HTTP request
@@ -95,6 +95,7 @@ export default function createNewOrders(orderType) {
     `Call to pharmacyOrders took ${endTime - startTime} milliseconds`,
   );
 
+  console.log(msgUUID);
   const timings = res.timings;
   console.log(`Blocked time: ${timings.blocked} ms`); // Time spent in a queue waiting for a network connection
   console.log(`Connecting time: ${timings.connecting} ms`); // Time spent setting up TCP connection
@@ -113,6 +114,6 @@ export default function createNewOrders(orderType) {
     receiveHISOrdersTrend.add(res.timings.duration);
     sleep(1);
 
-    return msgUUID;
+    return [msgUUID, selected_item];
   }
 }

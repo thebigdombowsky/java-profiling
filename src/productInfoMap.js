@@ -5,6 +5,8 @@ export const productInfoMap = {
     automationMachineId: "BP04",
     sender: "HIS",
     receiver: "MedPortal",
+    expiryDate: "2025-05-31T00:00:00.000",
+    lotCode: "",
   },
   1793887: {
     product: "1793887",
@@ -12,6 +14,8 @@ export const productInfoMap = {
     automationMachineId: "BP04",
     sender: "HIS",
     receiver: "MedPortal",
+    expiryDate: "2025-05-31T00:00:00.000",
+    lotCode: "",
   },
   1793823: {
     product: "1793823",
@@ -19,6 +23,8 @@ export const productInfoMap = {
     automationMachineId: "BP04",
     sender: "HIS",
     receiver: "MedPortal",
+    expiryDate: "2026-02-28T00:00:00.000",
+    lotCode: "",
   },
   1799915: {
     product: "1799915",
@@ -26,6 +32,8 @@ export const productInfoMap = {
     automationMachineId: "BP04",
     sender: "HIS",
     receiver: "MedPortal",
+    expiryDate: "2025-05-31T00:00:00.000",
+    lotCode: "",
   },
   1860330: {
     product: "1860330",
@@ -33,6 +41,8 @@ export const productInfoMap = {
     automationMachineId: "BP04",
     sender: "HIS",
     receiver: "MedPortal",
+    expiryDate: "2024-09-30T00:00:00.000",
+    lotCode: "",
   },
   1903515: {
     product: "1903515",
@@ -40,6 +50,8 @@ export const productInfoMap = {
     automationMachineId: "",
     sender: "Shelves",
     receiver: "MedPortal",
+    expiryDate: "2026-02-28T00:00:00.000",
+    lotCode: "",
   },
   1791500: {
     product: "1791500",
@@ -47,6 +59,8 @@ export const productInfoMap = {
     automationMachineId: "",
     sender: "Shelves",
     receiver: "MedPortal",
+    expiryDate: "2025-05-31T00:00:00.000",
+    lotCode: "",
   },
   1826935: {
     product: "1826935",
@@ -54,6 +68,8 @@ export const productInfoMap = {
     automationMachineId: "",
     sender: "Shelves",
     receiver: "MedPortal",
+    expiryDate: "2025-06-30T00:00:00.000",
+    lotCode: "",
   },
   1803271: {
     product: "1803271",
@@ -61,6 +77,8 @@ export const productInfoMap = {
     automationMachineId: "",
     sender: "Shelves",
     receiver: "MedPortal",
+    expiryDate: "2025-05-31T00:00:00.000",
+    lotCode: "",
   },
   1000002: {
     product: "1000002",
@@ -68,6 +86,8 @@ export const productInfoMap = {
     automationMachineId: "",
     sender: "Shelves",
     receiver: "MedPortal",
+    expiryDate: "2024-09-30T00:00:00.000",
+    lotCode: "",
   },
 };
 

@@ -2,7 +2,9 @@ import { sleep, check } from "k6";
 import http from "k6/http";
 import { uuidv4 } from "../utils.js";
 import { Trend } from "k6/metrics";
+import { productInfoMap } from "../productInfoMap";
 
+let selected_item, product, automationMachineId, sender, receiver, upc;
 export const sendDispenseRequestTrend = new Trend(
   "sendDispenseRequest_duration",
 );
@@ -16,30 +18,11 @@ export default function sendDispenseRequest(orderId, orderType) {
   const msgUUID = uuidv4();
   const orderID = orderId;
 
-  const orderTypeMap = {
-    AUTO: {
-      product: "1877075",
-      upc: "0110304093414018",
-      automationMachineId: "BP04",
-      sender: "BoxPicker",
-      receiver: "MedPortal",
-    },
-    MANUAL: {
-      product: "1000945",
-      upc: "0100382903064144",
-      automationMachineId: "",
-      sender: "Shelves",
-      receiver: "MedPortal",
-    },
-  };
-
-  const orderInfo = orderTypeMap[orderType];
-  let product, automationMachineId;
-
-  if (orderInfo) {
-    product = orderInfo.product;
-    automationMachineId = orderInfo.automationMachineId;
-    //upc = orderInfo.upc;
+  if (productInfoMap[selected_item]) {
+    product = productInfoMap[selected_item].product;
+    sender = productInfoMap[selected_item].sender;
+    receiver = productInfoMap[selected_item].receiver;
+    upc = productInfoMap[selected_item].upc;
   } else {
     console.log(`Order type ${orderType} not found.`);
   }
@@ -53,8 +36,8 @@ export default function sendDispenseRequest(orderId, orderType) {
                     <typ:MsgId>${msgUUID}</typ:MsgId>
                     <typ:MsgTime>${msgTime}</typ:MsgTime>
                     <typ:MsgType>DispenseRequest</typ:MsgType>
-                    <typ:Receiver>${orderType.receiver}</typ:Receiver>
-                    <typ:Sender>${orderType.sender}</typ:Sender>
+                    <typ:Receiver>${receiver}</typ:Receiver>
+                    <typ:Sender>${sender}</typ:Sender>
                     <typ:TransCode>NEW</typ:TransCode>
                     <typ:Version>1.0</typ:Version>
                 </typ:MessageHeader>
@@ -103,7 +86,7 @@ export default function sendDispenseRequest(orderId, orderType) {
   console.log(`Receiving time: ${timings.receiving} ms`);
   console.log(`Duration: ${timings.duration} ms`);
   console.log(
-    `Call to dispenseRequests took ${endTime - startTime} milliseconds`,
+    `Call to dispenseRequests took ${startTime - endTime} milliseconds`,
   );
 
   {
