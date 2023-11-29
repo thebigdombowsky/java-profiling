@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad40f36e-b909-4f61-8618-45b76e2f5903" name="Changes" comment="SD-Remove extraneous files">
+    <list default="true" id="ad40f36e-b909-4f61-8618-45b76e2f5903" name="Changes" comment="SD-Add expiryDate to dispense update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/productInfoMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/productInfoMap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/create-new-orders-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/create-new-orders-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/pick-new-orders-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/pick-new-orders-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +21,8 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -124,8 +121,7 @@
       <workItem from="1700244943502" duration="5367000" />
       <workItem from="1700608380056" duration="2489000" />
       <workItem from="1701096021702" duration="1175000" />
-      <workItem from="1701097390026" duration="15732000" />
-      <workItem from="1701194044961" duration="7141000" />
+      <workItem from="1701097390026" duration="15649000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -167,27 +163,22 @@
       <option name="project" value="LOCAL" />
       <updated>1701096404652</updated>
     </task>
-    <task id="LOCAL-00006" summary="SD-Add expiryDate to dispense update">
-      <option name="closed" value="true" />
-      <created>1701193896251</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1701193896251</updated>
-    </task>
-    <task id="LOCAL-00007" summary="SD-Remove extraneous files">
-      <option name="closed" value="true" />
-      <created>1701194121593</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1701194121594</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -195,8 +186,7 @@
     <MESSAGE value="Add multi-order type" />
     <MESSAGE value="SD-Add random weighted product selection" />
     <MESSAGE value="SD-Add expiryDate to dispense update" />
-    <MESSAGE value="SD-Remove extraneous files" />
-    <option name="LAST_COMMIT_MESSAGE" value="SD-Remove extraneous files" />
+    <option name="LAST_COMMIT_MESSAGE" value="SD-Add expiryDate to dispense update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

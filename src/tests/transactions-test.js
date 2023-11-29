@@ -1,6 +1,5 @@
 import { group } from "k6";
 import createNewOrders from "./create-new-orders-test.js";
-//import sendDispenseRequest from "./create-dispense-requests-test.js";
 import pickNewOrders from "./pick-new-orders-test.js";
 import { executeWithCustomProbability } from "../utils.js";
 
@@ -13,13 +12,6 @@ export default function () {
     orderInfo = createNewOrders(typeOfOrder);
     // Additional actions related to creating orders
   });
-
-  /*
-  group("sendDispenseRequest", function () {
-    sendDispenseRequest(orderId, typeOfOrder);
-    // Additional actions related to sending dispense requests
-  });
-*/
 
   group("pickNewOrders", function () {
     pickNewOrders(orderInfo[0], orderInfo[1]);
