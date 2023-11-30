@@ -1,3 +1,4 @@
+// Product Info Map is a lookup table for product information
 export const productInfoMap = {
   1844493: {
     product: "1844493",
@@ -91,6 +92,7 @@ export const productInfoMap = {
   },
 };
 
+// Define the product ids for automation and manual orders
 export const automationProductIds = [
   "1844493",
   "1793887",
@@ -105,4 +107,6 @@ export const manualProductIds = [
   "1803271",
   "1000002",
 ];
+
+// Define the weights for the product ids
 export const weights = [40, 30, 15, 10, 5];

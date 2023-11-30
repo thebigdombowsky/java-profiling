@@ -172,6 +172,14 @@ function secureUUIDv4() {
   ).toLowerCase();
 }
 
+/*  This function is used to determine the type of order to create.
+    The type of order is determined by the percent value passed into the function.
+    The percent value represents the percent of orders that are AUTO.
+    The percent value is used to generate a random number between 0 and 1.
+    If the random number is less than or equal to the percent value, then the order is AUTO.
+    Otherwise, the order is MANUAL.
+    The type of order is returned.
+*/
 export function executeWithCustomProbability(percent) {
   const autoOrderPercent = percent; // percent of orders are AUTO
   const random = Math.random(); // Generates a random number between 0 and 1
@@ -185,10 +193,16 @@ export function executeWithCustomProbability(percent) {
     typeOfOrder = "MANUAL";
   }
 
-  // Perform other initialization tasks here (if needed)
-  return typeOfOrder; // Return the determined typeOfOrder
+  // Return the type of order
+  return typeOfOrder; 
 }
 
+/*
+This function is used to select a random item from an array of items.
+The items are weighted according to the weights array.
+The items are selected according to the items array.
+The selected item is returned.
+*/
 export function weighted_random(items, weights) {
   let i;
   for (i = 1; i < weights.length; i++) {
