@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad40f36e-b909-4f61-8618-45b76e2f5903" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <list default="true" id="ad40f36e-b909-4f61-8618-45b76e2f5903" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/create-new-orders-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/create-new-orders-test.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,6 +123,8 @@
       <workItem from="1700608380056" duration="2489000" />
       <workItem from="1701096021702" duration="1175000" />
       <workItem from="1701097390026" duration="15649000" />
+      <workItem from="1701377382041" duration="1039000" />
+      <workItem from="1701707992213" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />

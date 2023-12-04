@@ -17,8 +17,7 @@ export const receiveHISOrdersTrend = new Trend("receiveHISOrders_duration");
 let selected_item, product, sender, receiver, upc;
 
 export default function createNewOrders(orderType) {
-
-   //This code is used to select a random product id from a list of product ids.
+  //This code is used to select a random product id from a list of product ids.
   //The product ids are weighted according to the order type.
   //The product ids are selected according to the order type.
   //The selected product id is returned.
@@ -42,15 +41,18 @@ export default function createNewOrders(orderType) {
   }
 
   // Define the URL to send the HTTP request to
-  const url = "http://172.24.220.177:16384/IncomingWebServiceImpl/IncomingWebService";
+  const url =
+    "http://172.24.220.177:16384/IncomingWebServiceImpl/IncomingWebService";
   // Define the current time in ISO format;
+  const isoString = new Date().toISOString();
+  // Remove the trailing Z from the ISO string
   const msgTime = isoString.slice(0, -1);
   // Define the quantity of the product to be ordered
   const quantity = "1";
   // Define the UUID of the message
   const msgUUID = uuidv4();
 
-// Set the environment variable WM6_ORDER_ID to the UUID of the message
+  // Set the environment variable WM6_ORDER_ID to the UUID of the message
   __ENV.WM6_ORDER_ID = msgUUID;
 
   // Define the XML message to be sent to the MedPortal
@@ -112,7 +114,7 @@ export default function createNewOrders(orderType) {
     `Call to pharmacyOrders took ${endTime - startTime} milliseconds`,
   );
 
-// Log the HTTP response times for each stage of the request
+  // Log the HTTP response times for each stage of the request
   const timings = res.timings;
   console.log(`Blocked time: ${timings.blocked} ms`); // Time spent in a queue waiting for a network connection
   console.log(`Connecting time: ${timings.connecting} ms`); // Time spent setting up TCP connection
@@ -128,11 +130,11 @@ export default function createNewOrders(orderType) {
       "status is 200": (r) => r.status === 200,
       "transaction time OK": (r) => r.timings.duration < 2000,
     });
-// Add the duration of the receiveHISOrders transaction to the receiveHISOrdersTrend trend
+    // Add the duration of the receiveHISOrders transaction to the receiveHISOrdersTrend trend
     receiveHISOrdersTrend.add(res.timings.duration);
     sleep(1);
 
-// Return the UUID of the message and the selected item
+    // Return the UUID of the message and the selected item
     return [msgUUID, selected_item];
   }
 }
