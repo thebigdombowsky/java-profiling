@@ -42,7 +42,7 @@ export const productInfoMap = {
     automationMachineId: "BP03",
     sender: "HIS",
     receiver: "MedPortal",
-    expiryDate: "2024-09-30T00:00:00.000",
+    expiryDate: "2025-12-31T00:00:00.000",
     lotCode: "",
   },
   1903515: {

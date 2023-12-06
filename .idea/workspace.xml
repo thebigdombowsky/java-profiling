@@ -4,9 +4,104 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad40f36e-b909-4f61-8618-45b76e2f5903" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+    <list default="true" id="ad40f36e-b909-4f61-8618-45b76e2f5903" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/@isaacs-cliui-npm-8.0.2-f4364666d5-4a473b9b32.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/@npmcli-agent-npm-2.2.0-cf04e8a830-3b25312edb.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/@npmcli-fs-npm-3.1.0-0844a57978-a50a6818de.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/@pkgjs-parseargs-npm-0.11.0-cd2a3fe948-6ad6a00fc4.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/@playwright-test-npm-1.40.1-174ee2ce77-ae094e6cb8.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/abbrev-npm-2.0.0-0eb38a17e5-0e994ad2aa.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/agent-base-npm-7.1.0-4b12ba5111-f7828f9914.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/aggregate-error-npm-3.1.0-415a406f4e-1101a33f21.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/ansi-regex-npm-5.0.1-c963a48615-2aa4bb54ca.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/ansi-regex-npm-6.0.1-8d663a607d-1ff8b7667c.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/ansi-styles-npm-4.3.0-245c7d42c7-513b44c3b2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/ansi-styles-npm-6.2.1-d43647018c-ef940f2f0c.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/brace-expansion-npm-2.0.1-17aa2616f9-a61e7cd2e8.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/cacache-npm-18.0.1-11c6564db0-5a0b3b2ea4.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/chownr-npm-2.0.0-638f1c9c61-c57cf9dd07.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/clean-stack-npm-2.2.0-a8ce435a5c-2ac8cd2b2f.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/color-convert-npm-2.0.1-79730e935b-79e6bdb9fd.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/color-name-npm-1.1.4-025792b0ea-b044585952.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/debug-npm-4.3.4-4513954577-3dbad3f94e.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/eastasianwidth-npm-0.2.0-c37eb16bd1-7d00d7cd8e.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/emoji-regex-npm-8.0.0-213764015c-d4c5c39d5a.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/emoji-regex-npm-9.2.2-e6fac8d058-8487182da7.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/encoding-npm-0.1.13-82a1837d30-bb98632f8f.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/env-paths-npm-2.2.1-7c7577428c-65b5df55a8.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/err-code-npm-2.0.3-082e0ff9a7-8b7b1be20d.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/exponential-backoff-npm-3.1.1-04df458b30-3d21519a4f.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/foreground-child-npm-3.1.1-77e78ed774-139d270bc8.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/fs-minipass-npm-2.1.0-501ef87306-1b8d128dae.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/fs-minipass-npm-3.0.3-d148d6ac19-8722a41109.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/fsevents-npm-2.3.2-a881d6ac9f-97ade64e75.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/glob-npm-10.3.10-da1ef8b112-4f2fe2511e.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/graceful-fs-npm-4.2.11-24bb648a68-ac85f94da9.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/http-cache-semantics-npm-4.1.1-1120131375-83ac0bc60b.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/http-proxy-agent-npm-7.0.0-106a57cc8c-48d4fac997.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/https-proxy-agent-npm-7.0.2-83ea6a5d42-088969a0dd.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/iconv-lite-npm-0.6.3-24b8aae27e-3f60d47a5c.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/imurmurhash-npm-0.1.4-610c5068a0-7cae75c8cd.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/indent-string-npm-4.0.0-7b717435b2-824cfb9929.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/ip-npm-2.0.0-204facb3cc-cfcfac6b87.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/is-fullwidth-code-point-npm-3.0.0-1ecf4ebee5-44a30c2945.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/is-lambda-npm-1.0.1-7ab55bc8a8-93a32f0194.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/isexe-npm-3.1.1-9c0061eead-7fe1931ee4.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/jackspeak-npm-2.3.6-42e1233172-57d43ad11e.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/lru-cache-npm-10.1.0-f3d3a0f0ab-58056d33e2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/lru-cache-npm-6.0.0-b4c8668fe1-f97f499f89.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/make-fetch-happen-npm-13.0.0-f87a92bb87-7c7a6d381c.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/minimatch-npm-9.0.3-69d7d6fad5-253487976b.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/minipass-collect-npm-2.0.1-73d3907e40-b251bceea6.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/minipass-fetch-npm-3.0.4-200ac7c66d-af7aad15d5.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/minipass-flush-npm-1.0.5-efe79d9826-56269a0b22.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/minipass-npm-3.3.6-b8d93a945b-a30d083c80.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/minipass-npm-5.0.0-c64fb63c92-425dab2887.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/minipass-npm-7.0.4-eacb4e042e-87585e258b.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/minipass-pipeline-npm-1.2.4-5924cb077f-b14240dac0.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/minipass-sized-npm-1.0.3-306d86f432-79076749fc.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/minizlib-npm-2.1.2-ea89cd0cfb-f1fdeac0b0.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/mkdirp-npm-1.0.4-37f6ef56b9-a96865108c.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/negotiator-npm-0.6.3-9d50e36171-b8ffeb1e26.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/node-gyp-npm-10.0.1-48708ce70b-60a74e66d3.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/nopt-npm-7.2.0-dd734b678d-a9c0f57fb8.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/p-map-npm-4.0.0-4677ae07c7-cb0ab21ec0.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/path-scurry-npm-1.10.1-52bd946f2e-e2557cff3a.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/playwright-core-npm-1.40.1-d5a17fae9e-84d92fb9b8.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/playwright-npm-1.40.1-68ec3f34c0-9e36791c1b.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/proc-log-npm-3.0.0-a8c21c2f0f-02b64e1b39.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/promise-retry-npm-2.0.1-871f0b01b7-f96a3f6d90.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/retry-npm-0.12.0-72ac7fb4cc-623bd7d2e5.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/safer-buffer-npm-2.1.2-8d5c0b705e-cab8f25ae6.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/semver-npm-7.5.4-c4ad957fcd-12d8ad952f.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/signal-exit-npm-4.1.0-61fb957687-64c757b498.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/smart-buffer-npm-4.2.0-5ac3f668bb-b5167a7142.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/socks-npm-2.7.1-17f2b53052-259d9e3e8e.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/socks-proxy-agent-npm-8.0.2-df165543cf-4fb165df08.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/ssri-npm-10.0.5-1a7557d04d-0a31b65f21.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/string-width-npm-4.2.3-2c27177bae-e52c10dc3f.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/string-width-npm-5.1.2-bf60531341-7369deaa29.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/strip-ansi-npm-6.0.1-caddc7cb40-f3cd25890a.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/strip-ansi-npm-7.1.0-7453b80b79-859c73fcf2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/tar-npm-6.2.0-3eb25205a7-db4d9fe74a.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/unique-filename-npm-3.0.0-77d68e0a45-8e2f59b356.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/unique-slug-npm-4.0.0-e6b08f28aa-0884b58365.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/which-npm-4.0.0-dd31cd4928-f17e84c042.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/wrap-ansi-npm-7.0.0-ad6e1a0554-a790b846fd.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/wrap-ansi-npm-8.1.0-26a4e6ae28-371733296d.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.yarn/cache/yallist-npm-4.0.0-b493d9e907-343617202a.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/example-page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/LoginPage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/new-orders-ui-test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/set" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/create-new-orders-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/create-new-orders-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/install-state.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.yarn/install-state.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/productInfoMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/productInfoMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/transactions-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/transactions-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +122,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -65,7 +163,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\d4dombs\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.ApplicationConfigurable&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\d4dombs\\AquaProjects\\java-profiling\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -77,8 +175,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\d4dombs\AquaProjects\java-profiling\src" />
       <recent name="C:\Users\d4dombs\AquaProjects\java-profiling\src\tests" />
+      <recent name="C:\Users\d4dombs\AquaProjects\java-profiling\src" />
       <recent name="C:\Users\d4dombs\AquaProjects\java-profiling\lib" />
     </key>
   </component>
@@ -91,6 +189,9 @@
         <item itemvalue="Node.js.user-pick-orders.js" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SeleniumInternalSettingsState">
+    <option name="lastUrl" value="https://pm21x-perf-shva.sl-hc.com/auth/realms/Swisslog/protocol/openid-connect/auth?client_id=medportal&amp;redirect_uri=https%3A%2F%2Fpm21x-perf-shva.sl-hc.com%2F&amp;state=eb13edfc-3ad4-47a4-9a91-17ec9da96cab&amp;response_mode=fragment&amp;response_type=code&amp;scope=openid&amp;nonce=4e8160bf-b36a-4b5e-8a8e-0962a2557298" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -125,6 +226,9 @@
       <workItem from="1701097390026" duration="15649000" />
       <workItem from="1701377382041" duration="1039000" />
       <workItem from="1701707992213" duration="40000" />
+      <workItem from="1701708045091" duration="28045000" />
+      <workItem from="1701888209249" duration="2314000" />
+      <workItem from="1701890556559" duration="39000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -174,7 +278,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701363207770</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="SD-Add comments">
+      <option name="closed" value="true" />
+      <created>1701708167863</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701708167864</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Merge remote-tracking branch 'origin/main'">
+      <option name="closed" value="true" />
+      <created>1701708184373</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701708184373</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +319,9 @@
     <MESSAGE value="SD-Add expiryDate to dispense update" />
     <MESSAGE value="SD-Remove extraneous files" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="SD-Add comments" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
