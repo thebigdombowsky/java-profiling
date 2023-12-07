@@ -1,5 +1,5 @@
 import { Browser } from "k6/experimental/browser";
-import { LoginPage } from "./LoginPage";
+import { LoginPage } from "../pages/loginpage.ts";
 
 export default async function () {
   const browser = new Browser();

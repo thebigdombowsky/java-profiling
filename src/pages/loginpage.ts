@@ -1,9 +1,9 @@
 import { Locator, Page } from "k6/experimental/browser";
 export class LoginPage {
-  page: Page;
-  usernameInput: Locator;
-  passwordInput: Locator;
-  signinButton: Locator;
+  public page: Page;
+  public usernameInput: Locator;
+  public passwordInput: Locator;
+  public signinButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
